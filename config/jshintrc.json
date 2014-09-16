@@ -1,0 +1,17 @@
+{
+  // Enforcing options
+  "curly": true, // {}の利用
+  "eqeqeq": true, // ===の利用
+  "eqnull": false, // == null
+  "undef": true, // undefinedの変数
+  "unused": true, // 未使用の変数
+  "strict": true, // "use strict";
+  "maxdepth": 5, // ネスト数制限
+  "maxlen": 80, // 一行の文字数制限
+
+  // Relaxing options
+  "browser": true, // ブラウザ用変数の利用
+  "devel": true, // console,alertの利用
+  "jquery": true // jQueryの利用
+}
+
