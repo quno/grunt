@@ -12,14 +12,14 @@ module.exports = function(grunt){
     compass: {
       dist: {
         options: {
-          config: 'config_dev.rb'
+          config: 'config/config_dev.rb'
         }
       }
     },
     jshint: {
       files: ['js/*.js'],
       options: {
-        jshintrc: 'jshintrc.json',
+        jshintrc: 'config/jshintrc.json',
         force: true
       }
     },
@@ -65,3 +65,4 @@ module.exports = function(grunt){
   grunt.registerTask('ts',['typescript']);
   grunt.registerTask('default',['validation','compass','jshint']);
 };
+
