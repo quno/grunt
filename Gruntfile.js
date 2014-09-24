@@ -34,6 +34,15 @@ module.exports = function(grunt){
         }
       }
     },
+    connect: {
+      site: {
+        options: {
+          protocol: 'http',
+          hostname: 'localhost',
+          port: 8888
+        }
+      }
+    },
     watch: {
       html: {
         files: ['*.html'],
@@ -53,6 +62,9 @@ module.exports = function(grunt){
       typescript: {
         files: ['src/*.ts'],
         tasks: ['typescript']
+      },
+      options: {
+        livereload: true
       }
     }
   });
@@ -60,9 +72,9 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-typescript');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('start',['watch']);
   grunt.registerTask('ts',['typescript']);
   grunt.registerTask('default',['validation','compass','jshint']);
 };
-
